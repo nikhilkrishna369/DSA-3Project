@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f1f5f9;
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 3px;
+}
+
+.app-bg {
+  background-color: #000000;
+}
+
+/* Minimalist Black & White Theme Overrides */
+body {
+  background: #000000 !important;
+  color: #ffffff;
+}
+
+.bg-slate-900, .bg-slate-850 { background-color: #000000 !important; }
+.bg-slate-800 { background-color: #0a0a0a !important; border: 1px solid #222222 !important; }
+.bg-slate-700 { background-color: #1a1a1a !important; }
+.border-slate-700 { border-color: #222222 !important; }
+.border-slate-600 { border-color: #333333 !important; }
+.text-slate-400 { color: #888888 !important; }
+.text-slate-300 { color: #aaaaaa !important; }
+.text-slate-200 { color: #cccccc !important; }
+
+/* Convert Primary Blue/Violet to White/Grayscale */
+.bg-blue-600, .bg-blue-500, .bg-violet-500 { background-color: #ffffff !important; color: #000000 !important; }
+.hover\:bg-blue-700:hover, .hover\:bg-blue-500:hover { background-color: #dddddd !important; color: #000000 !important; }
+.text-blue-500, .text-violet-500, .text-blue-400, .text-violet-400 { color: #ffffff !important; }
+.bg-blue-500\/10, .bg-blue-400\/10, .bg-violet-500\/10, .bg-blue-600\/20 { background-color: rgba(255, 255, 255, 0.1) !important; }
+.border-blue-500\/20, .border-violet-500\/20, .border-blue-500\/50 { border-color: rgba(255, 255, 255, 0.2) !important; }
+.shadow-blue-500\/25, .shadow-violet-500\/10, .shadow-blue-500\/20 { box-shadow: 0 4px 14px 0 rgba(255,255,255,0.1) !important; }
+
+/* Selection */
+::selection {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: none !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+  .glass-card {
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid #222222;
+  }
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: #0a0a0a !important;
+  border: 1px solid #222222 !important;
+  border-radius: 0.5rem;
+}
+
+.react-flow__background {
+  background-color: #000000 !important;
+}
+
+a, button {
+  transition: all 0.2s ease-in-out;
+}
